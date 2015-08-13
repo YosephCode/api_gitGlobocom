@@ -1,0 +1,17 @@
+{
+  "name": "api__gitGlobo",
+  "version": "0.0.0",
+  "homepage": "\"\"",
+  "authors": [
+    "Yoseph Santos <yosephcsantos@gmail.com>"
+  ],
+  "description": "Api github of Globocom",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
