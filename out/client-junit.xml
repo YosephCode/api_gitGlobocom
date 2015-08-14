@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite>
+<testcase classname="js.app" name="app:7:35">
+  <failure message="'alert' was used before it was defined." />
+</testcase>
+<testcase classname="js.app" name="app:7:48">
+  <failure message="Missing space between ';' and '}'." />
+</testcase>
+<testcase classname="js.app" name="app:9:5">
+  <failure message="'angular' was used before it was defined." />
+</testcase>
+<testcase classname="js.app" name="app:12:3">
+  <failure message="Move the invocation into the parens that contain the function." />
+</testcase>
+  </testsuite>
+</testsuites>

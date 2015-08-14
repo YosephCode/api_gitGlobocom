@@ -32,27 +32,33 @@ module.exports = function(grunt){
                 }
             }
         },
-        jslint: {
-          client: {
-            src: [
-              'js/*.js'
-            ],
-            directives: {
-              browser: true,
-              predef: [
-                'jQuery'
-              ]
-            },
-            options: {
-              junit: 'out/client-junit.xml'
-            }
-          }
+        jshint: {
+            all: ['Gruntfile.js', 'js/*.js']
         },
+        // jslint: {
+        //   client: {
+        //     src: [
+        //       'js/*.js'
+        //     ],
+        //     directives: {
+        //       browser: true,
+        //       predef: [
+        //         'jQuery',
+        //       ]
+        //     },
+        //     options: {
+        //       junit: 'out/client-junit.xml'
+        //     }
+        //   }
+        // },
         uglify: {
             js: {
                 files: {
                     'build/js/app.min.js': ['js/*.js']
                 }
+            },
+            options: {
+                mangle: false
             }
         }
     });
@@ -60,10 +66,11 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-jslint');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    // grunt.loadNpmTasks('grunt-jslint');
     grunt.loadNpmTasks('grunt-contrib-connect');
 
     // Start web server
-    grunt.registerTask('build', ['less', 'cssmin', 'jslint', 'uglify']);
+    grunt.registerTask('build', ['less', 'cssmin', 'jshint', 'uglify']);
     grunt.registerTask('default', ['connect:server']);
 };
