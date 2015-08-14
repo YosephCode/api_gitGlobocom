@@ -35,22 +35,6 @@ module.exports = function(grunt){
         jshint: {
             all: ['Gruntfile.js', 'js/*.js']
         },
-        // jslint: {
-        //   client: {
-        //     src: [
-        //       'js/*.js'
-        //     ],
-        //     directives: {
-        //       browser: true,
-        //       predef: [
-        //         'jQuery',
-        //       ]
-        //     },
-        //     options: {
-        //       junit: 'out/client-junit.xml'
-        //     }
-        //   }
-        // },
         uglify: {
             js: {
                 files: {
@@ -67,7 +51,6 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    // grunt.loadNpmTasks('grunt-jslint');
     grunt.loadNpmTasks('grunt-contrib-connect');
 
     // Start web server
