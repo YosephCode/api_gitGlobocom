@@ -11,6 +11,8 @@ body {
 .md-main-page {
   width: 100%;
   margin: 0 auto;
+  /*repositories list*/
+  /*repositories data*/
 }
 .md-main-page .md-menu {
   width: 30%;
@@ -42,6 +44,7 @@ body {
   overflow-x: hidden;
   color: #777777;
   left: 35%;
+  /*commits list*/
 }
 .md-main-page .md-details-repository .md-info {
   font-size: 1.4em;
@@ -137,7 +140,7 @@ body {
   .md-main-page .md-details-repository .md-info .md-title {
     padding: 0;
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1.2em;
   }
   .md-main-page .md-details-repository .md-commits {
     overflow-y: scroll;

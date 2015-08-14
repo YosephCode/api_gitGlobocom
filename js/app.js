@@ -73,7 +73,6 @@ app.controller('repositoriesController', function($scope, repositoriesService, c
 		if(newRepos) {
 			commitsRepositoryService.event(newRepos).success(function(data,status) {
 				$scope.commits = data.data;
-				console.info($scope.commits);
 			});
 		}
 	});
