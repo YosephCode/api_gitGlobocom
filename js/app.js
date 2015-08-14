@@ -41,7 +41,7 @@ var app = angular.module('ApiGit', ['Services', 'ngRoute', 'angularUtils.directi
 app.config(function($routeProvider, $locationProvider) {
  $routeProvider
  .when('/', {controller: 'repositoriesController'})
- .when('/:nameRepo', {templateUrl:'views/repositories.html', controller: 'routeNameController'})
+ .when('/:nameRepo', {templateUrl:'/views/repositories.html', controller: 'routeNameController'})
  .otherwise({redirectTo: '/'});
  $locationProvider.html5Mode({
   enabled: true,
