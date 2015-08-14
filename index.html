@@ -18,16 +18,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body ng-app="ApiGit">
-	<article class="md-main-page" ng-controller="repositoriesController">
-		<section class="md-menu">
+	<article class="md-main-page" ng-controller="repositoriesController" role="application" itemscope>
+		<section class="md-menu" role="menubar">
 			<h1 class="md-title">Projetos</h1>
-				<ul class="md-repositories">
-					<a class="md-option" href="/#/{{rep.name}}" ng-repeat="rep in repositories | orderBy:'-stargazers_count'" ng-click="dataRepository(rep)">
-						<li class="md-name-repos">{{rep.name}}</li>
+				<ul class="md-repositories" role="menu" itemscope>
+					<a class="md-option" href="/#/{{rep.name}}" ng-repeat="rep in repositories | orderBy:'-stargazers_count'" ng-click="dataRepository(rep)" role="link" itemprop="url">
+						<li class="md-name-repos" role="menuitem" itemprop="name">{{rep.name}}</li>
 					</a>
 				</ul>
 		</section>
-		<section class="md-details-repository" ng-view></section>
+		<section class="md-details-repository" role="article" ng-view></section>
 	</article>
 
 

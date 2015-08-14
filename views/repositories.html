@@ -1,20 +1,20 @@
-<article class="md-info">
-	<h1 class="md-title">{{repository.name}}</h1>
-	<span class="md-icon-count">
+<article class="md-info" role="heading" itemscope>
+	<h1 class="md-title" role="presentation" itemprop="name">{{repository.name}}</h1>
+	<span class="md-icon-count" role="presentation" itemprop="forks">
 		<i class="fa fa-code-fork"></i>
 		{{repository.forks_count}}
 	</span>
-	<span>
+	<span role="presentation" itemprop="stars">
 		<i class="fa fa-star"></i>
 		{{repository.stargazers_count}}
 	</span>
 </article>
-<article class="md-commits">
+<article class="md-commits" role="complementary" itemscope>
 	<section class="md-thumbnail" dir-paginate="cmt in commits | itemsPerPage:20" >
-      <img class="md-avatar" ng-src="{{cmt.author.avatar_url}}" alt="{{cmt.author.login}}">
+      <img class="md-avatar" ng-src="{{cmt.author.avatar_url}}" alt="{{cmt.author.login}}" role="img" itemprop="image">
       <setcion class="md-info-avatar">
-        <h3 class="md-name">{{cmt.author.login}}</h3>
-        <p>{{cmt.commit.message}}</p>
+        <h3 class="md-name" role="presentation" itemprop="name">{{cmt.author.login}}</h3>
+        <p role="presentation" itemprop="message">{{cmt.commit.message}}</p>
       </section>
     </section>
 
